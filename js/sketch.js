@@ -10,18 +10,28 @@ let img;
 function setup() {
   createCanvas(csizex, csizey);
   frameRate(60)
-  
 }
 function draw() {
   background(0);
   image(img, x, y,sizex,sizey)
-  fill(255)
   x=x+xspeed
   y=y+yspeed
-  if(x>=csizex-sizex){xspeed=-random(7,13)}
-  if(x<=0){xspeed=random(7,13)}
-  if(y>=csizey-sizey){yspeed=-random(7,13)}
-  if(y<=0){yspeed=random(7,13)}
+  if(x>=csizex-sizex){
+    xspeed=-random(7,13)
+    tint(random(80,255),random(80,255),random(80,255))
+  }
+  if(x<=0){
+    xspeed=random(7,13)
+    tint(random(80,255),random(80,255),random(80,255))
+  }
+  if(y>=csizey-sizey){
+    yspeed=-random(7,13)
+    tint(random(80,255),random(80,255),random(80,255))
+  }
+  if(y<=0){
+    yspeed=random(7,13)
+    tint(random(80,255),random(80,255),random(80,255))
+  }
 }
 function preload() {
   img = loadImage('assets/dvd.png');
